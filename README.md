@@ -85,5 +85,8 @@ GitHub Push Protection may block pushes with exposed secrets.
 MIT License. Use freely, but please credit this repo if you build on top of it.
 
 
-![Screenshot of SpeakQuery](https://raw.githubusercontent.com/<your-username>/<your-repo>/main/path/to/image.png)
+## 🖼️ Demo
+
+![App Screenshot](assets/demo.png)
+
 
