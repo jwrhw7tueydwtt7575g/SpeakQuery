@@ -1,0 +1,14 @@
+flask
+werkzeug
+pdfplumber
+python-pptx
+pandas
+speechrecognition
+groq
+sentence-transformers
+scikit-learn
+numpy
+torch
+openpyxl
+Pillow
+ffmpeg-python 

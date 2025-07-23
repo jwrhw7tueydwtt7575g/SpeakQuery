@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document Intelligence System</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📄 Document Intelligence Query</h1>
+    <form method="POST" enctype="multipart/form-data">
+      <label>Upload Documents (PDF, PPTX, XLSX, CSV, TXT):</label>
+      <input type="file" name="documents" multiple required>
+
+      <label>Enter Text Query:</label>
+      <input type="text" name="query_text" id="query_text" placeholder="Ask a question..." required>
+
+      <button type="button" id="recordBtn">🎙️ Record Voice Query</button>
+      <button type="submit">🔍 Search</button>
+    </form>
+
+    <div id="results">
+      {% if results %}
+        <h2>Results for: <em>{{ query }}</em></h2>
+        {% for fname, score, summary in results %}
+          <div class="card">
+            <h3>{{ fname }} (Score: {{ '%.2f' % score }})</h3>
+            <pre>{{ summary }}</pre>
+          </div>
+        {% endfor %}
+      {% endif %}
+    </div>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
